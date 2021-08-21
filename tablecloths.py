@@ -20,15 +20,15 @@ def does_cover(tc: Tuple) -> bool:
 
 n = int(input())                    # tablecloth number
 w, h = map(int, input().split())    # wieght and height of table
-tableclothes = []
+tablecloths = []
 
-# height, width and cost of tableclothes available in the store
+# height, width and cost of tablecloths available in the store
 for i in range(n):
     wi, hi, ci = map(int, input().split())
-    tableclothes.append((wi, hi, ci))
+    tablecloths.append((wi, hi, ci))
 
 
-matching_tableclothes = list(filter(does_cover, tableclothes))
+matching_tableclothes = list(filter(does_cover, tablecloths))
 
 opt_t = min(matching_tableclothes, key=lambda tc: tc[2])
 print(opt_t[2])
